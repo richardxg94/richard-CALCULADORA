@@ -1,0 +1,83 @@
+/* Reseteo básico para tener un punto de partida consistente. */
+* { box-sizing: border-box; } /* El padding/borde no “engorda” el ancho total. */
+
+:root{ /* Variables para colores reutilizables. */
+  --bg: #05243b;       /* Color de fondo general. */
+  --card: #000000;     /* Fondo de la tarjeta. */
+  --text: #f50000;     /* Texto principal. */
+  --muted: #000000;    /* Texto secundario. */
+  --primary: #00ff15;  /* Color principal (botones/acentos). */
+}
+
+html, body { height: 100%; } /* Permite centrar verticalmente si se desea. */
+
+body{
+ 
+
+  margin: 0; /* Quitamos margen por defecto del body. */
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif; /* Fuente legible. */
+  background: var(--bg); /* Fondo clarito. */
+  color: var(--text); /* Color de texto base. */
+  display: grid; /* Usamos grid para centrar. */
+  place-items: center; /* Centrado horizontal/vertical. */
+  padding: 24px; /* Espacio respirable. */
+}
+
+.card{
+  background: var(--card); /* Fondo blanco para la tarjeta. */
+  width: min(420px, 92vw); /* Ancho responsive (máx. 420px). */
+  padding: 20px; /* Espacio interno. */
+  border-radius: 12px; /* Esquinas redondeadas. */
+  box-shadow: 0 12px 24px rgba(0,0,0,.08); /* Sombra suave. */
+}
+
+h1{
+  margin: 0 0 16px; /* Quitamos margen superior y dejamos inferior. */
+  text-align: center; /* Centrar título. */
+}
+
+label{
+  display: block; /* Cada etiqueta en su propia línea. */
+  margin: 10px 0 6px; /* Espaciado alrededor. */
+  color: var(--muted); /* Color más suave. */
+}
+
+input{
+  width: 100%; /* Ocupa todo el ancho disponible. */
+  padding: 10px 12px; /* Relleno interno cómodo. */
+  border: 1px solid #dbe2ea; /* Borde sutil. */
+  border-radius: 8px; /* Esquinas redondeadas. */
+  font-size: 1rem; /* Tamaño de letra cómodo. */
+}
+
+.buttons{
+  display: grid; /* Rejilla para alinear botones. */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales. */
+  gap: 10px; /* Separación entre botones. */
+  margin: 16px 0; /* Separación vertical respecto a inputs y resultados. */
+}
+
+button{
+  padding: 12px; /* Área clicable cómoda. */
+  border: none; /* Sin borde por defecto. */
+  border-radius: 8px; /* Botón redondeado. */
+  background: var(--primary); /* Fondo azul. */
+  color: #fff; /* Texto blanco. */
+  font-weight: 700; /* Texto más fuerte. */
+  cursor: pointer; /* Mano al pasar. */
+  transition: transform .05s ease, filter .15s ease; /* Animaciones sutiles. */
+}
+button:hover{ filter: brightness(1.05); } /* Aclara un poquito al pasar. */
+button:active{ transform: translateY(1px); } /* Simula “hundirse” al pulsar. */
+
+.result{
+  font-size: 1.1rem; /* Un poco más grande para destacar. */
+  text-align: center; /* Centrar el texto del resultado. */
+  margin: 8px 0 2px; /* Espaciado. */
+}
+
+.msg{
+  color: #c2410c; /* Naranja tostado para avisos. */
+  text-align: center; /* Centrar mensajes. */
+  min-height: 20px; /* Reserva espacio aunque no haya texto. */
+}

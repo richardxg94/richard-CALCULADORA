@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- Usar HTML5 en modo estándar. -->
+<html lang="es"> <!-- Idioma del documento: español. -->
+<head> <!-- Zona de metadatos y enlaces. -->
+  <meta charset="UTF-8"> <!-- Soporte para tildes, eñes y símbolos. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista correcta en móviles. -->
+  <title>Calculadora Sencilla</title> <!-- Título de la pestaña del navegador. -->
+  <link rel="stylesheet" href="styles.css"> <!-- Conectar estilos externos. -->
+</head> <!-- Fin del head. -->
+<body>
+   <!-- Contenido visible. -->
+   <div class="quote">calculadore </div>
+
+  <main class="card"> <!-- Tarjeta central que contiene la calculadora. -->
+    <h1>🧮 Calculadora Sencilla</h1> <!-- Título que verá el estudiante. -->
+
+    <label for="n1">Número 1</label> <!-- Etiqueta accesible para el primer input. -->
+    <input id="n1" type="number" step="any" placeholder="Ej. 12.5"> <!-- Primer número (decimales permitidos). -->
+
+    <label for="n2">Número 2</label> <!-- Etiqueta accesible para el segundo input. -->
+    <input id="n2" type="number" step="any" placeholder="Ej. 3"> <!-- Segundo número. -->
+
+    <div class="buttons"> <!-- Contenedor de botones de operación. -->
+      <button data-op="add">Sumar +</button> <!-- Botón para sumar. -->
+      <button data-op="sub">Restar −</button> <!-- Botón para restar. -->
+      <button data-op="mul">Multiplicar ×</button> <!-- Botón para multiplicar. -->
+      <button data-op="div">dividir /</button> <!-- Botón para dividir -->
+      <button data-op="porcentaje">porcentaje %</button> <!-- Botón para porcentaje -->
+      <button data-op="sqrt">raiz √</button> <!-- Botón para sumar. -->
+
+    </div>
+
+    <p id="resultado" class="result">Resultado: 0</p> <!-- Donde mostraremos el resultado. -->
+    <p id="mensaje" class="msg" aria-live="polite"></p> <!-- Mensajes de ayuda/validación (lectores de pantalla). -->
+  </main> <!-- Fin de la tarjeta. -->
+
+  <script src="script.js"></script> <!-- Conectar la lógica de JavaScript (al final para que el DOM ya exista). -->
+</body> <!-- Fin del body. -->
+</html> <!-- Fin del documento. -->
